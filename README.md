@@ -44,15 +44,9 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 
 <h2 id="features">🔥 Features</h2>
 
-Docker Containerization: The application is fully containerized, ensuring consistent deployment and scalability across environments.
-
-Persistent Data Storage: Utilizes bind mounts to persist data on the host machine, preventing data loss during container restarts.
-
-Docker Compose Integration: Simplifies deployment with docker-compose
-
-+ **Docker Containerization:** The application is containerized for consistent deployment and scaling.
-+ **Persistent Data:** Utilizes bind mounts to persist data on the host machine, preventing data loss during container restarts.
-+ **Docker Compose Deployment:** Simplifies deployment with Docker Compose, enabling easy setup and management without complex commands.
+- **Docker Containerization:** The application is containerized for consistent deployment and scaling.
+- **Persistent Data:** Utilizes bind mounts to persist data on the host machine, preventing data loss during container restarts.
+- **Docker Compose Deployment:** Simplifies deployment with Docker Compose, enabling easy setup and management without complex commands.
 
 <br/>
 
@@ -71,6 +65,7 @@ Docker Compose Integration: Simplifies deployment with docker-compose
 git clone https://github.com/ahmettoguz/core-docker-config
 git clone https://github.com/ahmettoguz/core-portainer
 ```
+
 - Refer to the documentation provided in the [`core-docker-config`](https://github.com/ahmettoguz/core-docker-config) project for the system startup commands.
 
 <br/>
