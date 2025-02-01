@@ -52,7 +52,7 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 
 <h2 id="releases">🚢 Releases</h2>
 
-&nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=version&labelColor=470137&color=077521)](https://github.com/ahmettoguz/core-portainer/tree/v1.0.0)
+&nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=version&labelColor=111727&color=0AA5EC)](https://github.com/ahmettoguz/core-portainer/tree/v1.0.0)
 
 <br/>
 
