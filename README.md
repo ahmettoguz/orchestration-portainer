@@ -22,7 +22,7 @@
 
 <h2 id="intro">📌 About Project</h2>
 
-This project aims to simplify the use of Portainer with pre-configured settings, including persistent bind mount data and Docker Compose for streamlined container management. For system startup, refer to the [core-docker-config](https://github.com/ahmettoguz/core-docker-config) repository.
+This project aims to simplify the use of Portainer with pre-configured settings, including persistent bind mount data and Docker Compose for container management. For system startup, refer to the [`core-docker-config`](https://github.com/ahmettoguz/core-docker-config) repository.
 
 <br/>
 
@@ -44,9 +44,9 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 
 <h2 id="features">🔥 Features</h2>
 
-- **Docker Containerization:** The application is containerized for consistent deployment and scaling.
+- **Docker Containerization:** The application is containerized using Docker to ensure consistent deployment, scalability, and isolation across different environments.
 - **Persistent Data:** Utilizes bind mounts to persist data on the host machine, preventing data loss during container restarts.
-- **Docker Compose Deployment:** Simplifies deployment with Docker Compose, enabling easy setup and management without complex commands.
+- **Docker Compose Deployment:** Simplifies deployment with Docker Compose configuration, enabling easy setup and service orchestration without complex commands.
 
 <br/>
 
@@ -59,7 +59,7 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 <h2 id="system-startup">🚀 System Startup</h2>
 
 - Create a new directory named `core`.
-- Clone the `core-docker-config` and `core-portainer` repositories into the `core` directory.
+- Clone the [`core-docker-config`](https://github.com/ahmettoguz/core-docker-config) and [`core-portainer`](https://github.com/ahmettoguz/core-portainer) repositories into the `core` directory.
 
 ```
 git clone https://github.com/ahmettoguz/core-docker-config
