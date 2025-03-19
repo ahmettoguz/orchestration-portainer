@@ -1,0 +1,18 @@
+####################################### Services
+services:
+  traefik:
+    image: portainer/portainer-ce
+    container_name: core-portainer-c
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./volume:/data
+    networks:
+      - network-core
+    restart: unless-stopped
+    # ports:
+    #   - 9000:9000
+
+####################################### Networks
+networks:
+    network-core:
+      external: true
