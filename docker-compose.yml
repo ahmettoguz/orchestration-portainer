@@ -3,9 +3,11 @@ services:
   portainer:
     image: portainer/portainer-ce
     container_name: core-portainer-c
+    command: --admin-password-file /tmp/portainer_password
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./volume:/data
+      - ./portainer_password:/tmp/portainer_password
     networks:
       - network-core
     restart: unless-stopped

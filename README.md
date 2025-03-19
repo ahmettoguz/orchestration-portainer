@@ -65,6 +65,12 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 git clone https://github.com/ahmettoguz/core-portainer
 ```
 
+- Create `portainer_password` file based on the `portainer_password.example` file and configure it appropriately to set initial admin password.
+
+```
+cp portainer_password.example portainer_password
+```
+
 - Create network if not exists.
 
 ```
