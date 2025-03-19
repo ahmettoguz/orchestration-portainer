@@ -74,10 +74,10 @@ docker network create network-core
 - Run Container.
 
 ```
-docker compose -p portfolio up --build -d  portainer
-docker stop                                core-portainer-c
-docker rm                                  core-portainer-c
-docker logs -f                             core-portainer-c
+docker stop                           core-portainer-c
+docker rm                             core-portainer-c
+docker compose -p core up --build -d  portainer
+docker logs -f                        core-portainer-c
 ```
 
 <br/>
