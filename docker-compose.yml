@@ -1,6 +1,6 @@
 ####################################### Services
 services:
-  traefik:
+  portainer:
     image: portainer/portainer-ce
     container_name: core-portainer-c
     volumes:
@@ -14,5 +14,5 @@ services:
 
 ####################################### Networks
 networks:
-    network-core:
-      external: true
+  network-core:
+    external: true

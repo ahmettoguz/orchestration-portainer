@@ -22,7 +22,7 @@
 
 <h2 id="intro">📌 About Project</h2>
 
-This project aims to simplify the use of Portainer with pre-configured settings, including persistent bind mount data and Docker Compose for container management. For system startup, refer to the [`core-docker-config`](https://github.com/ahmettoguz/core-docker-config) repository.
+This project aims to simplify the use of Portainer with pre-configured settings, including persistent bind mount data and Docker Compose for container management.
 
 <br/>
 
@@ -59,14 +59,26 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 <h2 id="system-startup">🚀 System Startup</h2>
 
 - Create a new directory named `core`.
-- Clone the [`core-docker-config`](https://github.com/ahmettoguz/core-docker-config) and [`core-portainer`](https://github.com/ahmettoguz/core-portainer) repositories into the `core` directory.
+- Clone the [`core-docker-config`](https://github.com/ahmettoguz/core-docker-config) repository into the `core` directory.
 
 ```
-git clone https://github.com/ahmettoguz/core-docker-config
 git clone https://github.com/ahmettoguz/core-portainer
 ```
 
-- Refer to the documentation provided in the [`core-docker-config`](https://github.com/ahmettoguz/core-docker-config) project for the system startup commands.
+- Create network if not exists.
+
+```
+docker network create network-core
+```
+
+- Run Container.
+
+```
+docker compose -p portfolio up --build -d  portainer
+docker stop                                core-portainer-c
+docker rm                                  core-portainer-c
+docker logs -f                             core-portainer-c
+```
 
 <br/>
 
