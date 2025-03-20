@@ -47,11 +47,13 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 - **Docker Containerization:** The application is containerized using Docker to ensure consistent deployment, scalability, and isolation across different environments.
 - **Persistent Data:** Utilizes bind mounts to persist data on the host machine, preventing data loss during container restarts.
 - **Docker Compose Deployment:** Simplifies deployment with Docker Compose configuration, enabling easy setup and service orchestration without complex commands.
+- **Predefined Admin Credentials:** Allows the use of a predefined admin password stored in a configuration file.
 
 <br/>
 
 <h2 id="releases">🚢 Releases</h2>
 
+&nbsp; [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/core-portainer/tree/v1.1.0)
 &nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/core-portainer/tree/v1.0.0)
 
 <br/>
@@ -59,19 +61,18 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 <h2 id="system-startup">🚀 System Startup</h2>
 
 - Create a new directory named `core`.
-- Clone the [`core-docker-config`](https://github.com/ahmettoguz/core-docker-config) repository into the `core` directory.
 
 ```
 git clone https://github.com/ahmettoguz/core-portainer
 ```
 
-- Create `portainer_password` file based on the `portainer_password.example` file and configure it appropriately to set initial admin password.
+- Create `portainer_password` file based on the `portainer_password.example` file and modify it to set secure initial admin password.
 
 ```
 cp portainer_password.example portainer_password
 ```
 
-- Create network if not exists.
+- Create `network-core` network if not exists.
 
 ```
 docker network create network-core
