@@ -23,7 +23,20 @@
 - Create a new directory named `core`.
 
 ```
+mkdir core
+cd core
+```
+
+- Clone project.
+
+```
 git clone https://github.com/ahmettoguz/core-portainer
+```
+
+- Generate secure password.
+
+```
+docker run --rm alpine sh -c "apk add --no-cache openssl && openssl rand -base64 32"
 ```
 
 - Create `portainer_password` file based on the `portainer_password.example` file and modify it to set secure initial admin password.
