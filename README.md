@@ -1,4 +1,10 @@
-<h1 id="top" align="center">🚢 v1.2.0 🚢</h1>
+<h1 id="top" align="center">Portainer <br/> 🚢 v1.3.0 🚢</h1>
+
+<br>
+
+<div align="center">
+    <img height=200 src="assets/banner/banner.png">
+</div>
 
 <br>
 
