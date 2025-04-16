@@ -1,4 +1,4 @@
-<h1 id="top" align="center">Core Portainer</h1>
+<h1 id="top" align="center">Portainer</h1>
 
 <br>
 
