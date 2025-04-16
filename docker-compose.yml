@@ -1,20 +1,20 @@
 ####################################### Services
 services:
   portainer:
-    image: portainer/portainer-ce
-    container_name: core-portainer-c
+    image: ahmettoguz/portainer-ce:2.29.0-alpine
+    container_name: orchestration-portainer-c
     command: --admin-password-file /tmp/portainer_password
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./volume:/data
+      - ./mount:/data
       - ./portainer_password:/tmp/portainer_password
     networks:
-      - network-core
-    restart: unless-stopped
+      - network-orchestration
+    restart: ${RESTART_POLICY}
     # ports:
     #   - 9000:9000
 
 ####################################### Networks
 networks:
-  network-core:
+  network-orchestration:
     external: true
