@@ -22,7 +22,7 @@
 
 <h2 id="intro">📌 About Project</h2>
 
-This project aims to simplify the use of Portainer with pre-configured settings, including persistent bind mount data and Docker Compose for container management.
+This project aims to simplify the use of Portainer with pre-configured settings, including persistent named volume and Docker Compose for container management.
 
 <br/>
 
@@ -40,6 +40,8 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 
 &nbsp; [![Portainer](https://img.shields.io/badge/Portainer-13BEF9?style=for-the-badge&logo=portainer&logoColor=white)](https://www.portainer.io/)
 
+&nbsp; [![.Env](https://img.shields.io/badge/.ENV-ECD53F.svg?style=for-the-badge&logo=dotenv&logoColor=black)](https://www.ibm.com/docs/bg/aix/7.2?topic=files-env-file)
+
 <br/>
 
 <h2 id="features">🔥 Features</h2>
@@ -47,13 +49,15 @@ This project aims to simplify the use of Portainer with pre-configured settings,
 - **Docker Containerization:** The application is containerized using Docker to ensure consistent deployment, scalability, and isolation across different environments.
 - **Docker Compose Deployment:** Simplifies deployment with Docker Compose configuration, enabling easy setup and service orchestration without complex commands.
 - **Network Compatibility:** Uses shared Docker network to work with other services.
-- **Persistent Data:** Binds the data directory from the host machine to the container, ensuring persistent data storage even with container restarts.
+- **Persistent Data:** Utilizes a named Docker volume to ensure persistent storage of application data, allowing data to persist across container restarts, rebuilds, and removals.
 - **.env Configuration:** All environment variables are easily configurable using the `.env` file, simplifying configuration management.
 - **Predefined Admin Credentials:** Allows the use of a predefined admin password stored in a configuration file.
 
 <br/>
 
 <h2 id="releases">🚢 Releases</h2>
+
+&nbsp; [![.](https://img.shields.io/badge/1.4.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/core-portainer/tree/v1.4.0)
 
 &nbsp; [![.](https://img.shields.io/badge/1.3.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/core-portainer/tree/v1.3.0)
 
@@ -104,12 +108,13 @@ cp portainer_password.example portainer_password
 docker network create network-orchestration
 ```
 
-- Run Container.
+- Manage Container.
 
 ```
 docker stop                                   orchestration-portainer-c
 docker rm                                     orchestration-portainer-c
-docker compose -p orchestration up --build -d portainer
+docker volume rm                              volume-portainer
+docker compose -p orchestration up -d         portainer
 docker logs -f                                orchestration-portainer-c
 ```
 
