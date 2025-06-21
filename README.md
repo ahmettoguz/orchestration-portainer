@@ -1,4 +1,4 @@
-<h1 id="top" align="center">Portainer <br/> 🚢 v1.3.0 🚢</h1>
+<h1 id="top" align="center">Portainer <br/> 🚢 v1.4.0 🚢</h1>
 
 <br>
 
