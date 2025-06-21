@@ -6,7 +6,7 @@ services:
     command: --admin-password-file /tmp/portainer_password
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./mount:/data
+      - volume-portainer:/data
       - ./portainer_password:/tmp/portainer_password
     networks:
       - network-orchestration
@@ -18,3 +18,8 @@ services:
 networks:
   network-orchestration:
     external: true
+
+####################################### Volumes
+volumes:
+  volume-portainer:
+    name: volume-portainer
