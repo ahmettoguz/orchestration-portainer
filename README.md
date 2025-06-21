@@ -20,7 +20,7 @@
 - **Docker Containerization:** The application is containerized using Docker to ensure consistent deployment, scalability, and isolation across different environments.
 - **Docker Compose Deployment:** Simplifies deployment with Docker Compose configuration, enabling easy setup and service orchestration without complex commands.
 - **Network Compatibility:** Uses shared Docker network to work with other services.
-- **Persistent Data:** Binds the data directory from the host machine to the container, ensuring persistent data storage even with container restarts.
+- **Persistent Data:** Utilizes a named Docker volume to ensure persistent storage of application data, allowing data to persist across container restarts, rebuilds, and removals.
 - **.env Configuration:** All environment variables are easily configurable using the `.env` file, simplifying configuration management.
 - **Predefined Admin Credentials:** Allows the use of a predefined admin password stored in a configuration file.
 
@@ -65,12 +65,13 @@ cp portainer_password.example portainer_password
 docker network create network-orchestration
 ```
 
-- Run Container.
+- Manage Container.
 
 ```
 docker stop                                   orchestration-portainer-c
 docker rm                                     orchestration-portainer-c
-docker compose -p orchestration up --build -d portainer
+docker volume rm                              volume-portainer
+docker compose -p orchestration up -d         portainer
 docker logs -f                                orchestration-portainer-c
 ```
 
