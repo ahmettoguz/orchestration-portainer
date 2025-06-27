@@ -1,6 +1,6 @@
 ####################################### Services
 services:
-  portainer:
+  service-portainer:
     image: ahmettoguz/portainer-ce:2.29.0-alpine
     container_name: orchestration-portainer-c
     command: --admin-password-file /tmp/portainer_password
