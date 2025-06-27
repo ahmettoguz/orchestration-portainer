@@ -68,11 +68,11 @@ docker network create network-orchestration
 - Manage Container.
 
 ```
-docker stop                                   orchestration-portainer-c
-docker rm                                     orchestration-portainer-c
-docker volume rm                              volume-portainer
-docker compose -p orchestration up -d         portainer
-docker logs -f                                orchestration-portainer-c
+docker stop                           orchestration-portainer-c
+docker rm                             orchestration-portainer-c
+docker volume rm                      volume-portainer
+docker compose -p orchestration up -d service-portainer
+docker logs -f                        orchestration-portainer-c
 ```
 
 <br/>
