@@ -39,12 +39,20 @@ cd orchestration
 
 ```
 git clone https://github.com/ahmettoguz/orchestration-portainer
+cd orchestration-portainer
+```
+
+- Switch version.
+
+```
+git checkout v1.4.2
 ```
 
 - Create `.env` file based on the `.env.example` file with credentails.
 
 ```
 cp .env.example .env
+nano .env
 ```
 
 - Generate secure password.
